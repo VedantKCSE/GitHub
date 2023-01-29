@@ -1,0 +1,10 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+      - run: docker build -t devops .
